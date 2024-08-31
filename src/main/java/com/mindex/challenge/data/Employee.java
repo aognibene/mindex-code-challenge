@@ -60,4 +60,16 @@ public class Employee {
     public void setDirectReports(List<Employee> directReports) {
         this.directReports = directReports;
     }
+    
+    @Override
+    public String toString() {
+    	return "Employee{" +
+                "employeeId='" + employeeId + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", position='" + position + '\'' +
+                ", department='" + department + '\'' +
+                ", directReportsCount=" + (directReports != null ? directReports.size() : 0) +
+                '}';
+    }
 }
