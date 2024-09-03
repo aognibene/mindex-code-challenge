@@ -39,12 +39,11 @@ public class ReportingStructureServiceImpl implements ReportingStructureService 
 	/**
 	 * Counts the reports for a given employee.
 	 * 
-	 * Performance: For very large hierarchies, recursive solutions might hit stack limits. 
-	 * Iterative solutions could be considered if performance becomes an issue.
+	 * Performance: Can use iterative solution if recursion has performance issues with a lot of nested reports
 	 * Please see iterative solution below.
 	 * 
-	 * Circular References: This implementation assumes that the reporting structure does not have circular references. 
-	 * If circular references are possible, additional logic would be needed to detect and handle them to prevent infinite recursion.
+	 * Circular References: Assuming no one can be a report of someone that reports to them this wont have circular references.
+	 * But if they were possible we would need to check that or else end up in infinite loop.
 	 * 
 	 * @param employee the employee for whom to count reports
      * @return the total number of reports

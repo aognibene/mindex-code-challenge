@@ -12,6 +12,7 @@ public interface CompensationRepository extends MongoRepository<Compensation, St
 	 * *NOTE*
 	 * If storing entire Employee class for employee field you could use findByEmployeeEmployeeId
 	 * 
+	 * 
 	 * @param employeeId
 	 * @return
 	 */
